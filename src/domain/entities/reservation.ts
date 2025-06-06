@@ -8,7 +8,7 @@ export class Reservation {
     public status: 'pending' | 'confirmed' | 'cancelled'
   ) {}
 
- confirm() {
+  confirm() {
     if (this.status === 'pending') {
       this.status = 'confirmed';
     } else {
@@ -23,4 +23,5 @@ export class Reservation {
         throw new Error('Reservation can only be cancelled if it is pending or confirmed.');
         }
     }
+    
 }
